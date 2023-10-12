@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Cassiel</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/93fb21b1e7.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Pedro <span>Cassiel</span></h1>
+      <nav>
+        <ul class="nav-primary">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#portifolio">Portifólio</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="#conhecimento">Conhecimento</a></li>
+        </ul>
+      </nav>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <section
+      aria-label="seção curriculo download Pedro Cassiel"
+      class="section-div"
+    >
+      <div>
+        <h2>Olá, eu sou</h2>
+        <h2 class="typing">Dev Web e Técnico em Redes</h2>
+        <p>
+          Olá, meu nome é Pedro Cassiel, sou um amante da tecnologia formado em
+          Redes de Computadores e Analise e Desenvolvimento de Sistemas, com
+          experiências em programação web, manutenção de hardware e redes
+        </p>
+        <button>Contato</button>
+      </div>
+      <!-- <img
+        src="/img/beanie-2562646_1280-removebg-preview.png"
+        alt="imagem de pedro cassiel"
+      /> -->
+      <model-viewer
+        alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+        src="/img/Earth_1_12756.glb"
+        touch-acton="pan-y"
+        autoplay
+        ar-modes="webxr scene-viewer"
+        scale="0.5 0.5 0.5"
+        shadow-intensity="1"
+        camera-controls
+        id="change-speed-demo"
+      ></model-viewer>
+    </section>
+    <main>
+      <article aria-label="sobre o krazio" class="about">
+        <div class="title_about">
+          <h1>Sobre mim</h1>
+          <p>Perfil Profissonal - Tudo sobre mim</p>
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <img src="/img/beanie-2562646_1280-removebg-preview.png" alt="" />
+        <div class="about-content">
+          <div class="about-text">
+            <h1>Olá, meu nome é Pedro <span>Cassiel</span></h1>
+            <p>
+              Ola, tenho <span class="age">20</span> anos e sou dev fullstack em
+              busca da sua primeira vaga, sou formado em Redes de Computadores e
+              Análise de Sistemas com experiencias variadas e sei um pouco de
+              tudo.
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
+              iure similique magni ut mollitia, eos distinctio placeat, veniam
+              odio iusto nihil sequi expedita nostrum dignissimos eaque facilis
+              unde sint impedit?
+            </p>
+            <br />
+          </div>
+          <div class="about-info">
+            <p>
+              <i class="fa-solid fa-calendar-days"></i>
+              Aniversário: 31/12/2002
+            </p>
+            <p>
+              <i class="fa-shap fa-solid fa-laptop-code"></i>
+              Aberto a Freelancers
+            </p>
+            <p>
+              <i class="fa-sharp fa-solid fa-globe"></i>
+              Português e Inglês Intermediário Avançado
+            </p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              Guaramiranga - CE
+            </p>
+            <p>
+              <i class="fa-solid fa-flag"></i>
+              Brazil
+            </p>
+            <p>
+              <i class="fa-solid fa-phone-volume"></i>
+              <a href="tel:+5585988363593">+55(85)988363593</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:pedrocss1234@gmail.com">pedrocss1234@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script src="/script.js"></script>
+  <script src="https://unpkg.com/scrollreveal">
+    ScrollReveal().reveal(".about-content");
+  </script>
+  <script type="module">
+    const modelViewer = document.querySelector("#change-speed-demo");
+    const speeds = [1, 2, 0.5, -1];
+
+    let i = 0;
+    const play = () => {
+      modelViewer.timeScale = speeds[i++ % speeds.length];
+      modelViewer.play({ repetitions: 1 });
+    };
+    modelViewer.addEventListener("load", play);
+    modelViewer.addEventListener("finished", play);
+  </script>
+  <script
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"
+  ></script>
+</html>

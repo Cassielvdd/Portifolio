@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+    .container {
+      width: 0px;
+      height: 0px;
+    }
+  </style>
+  <body>
+    <model-viewer
+      alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+      src="Earth_1_12756.glb"
+      shadow-intensity="1"
+      camera-controls
+      touch-action="pan-y"
+    ></model-viewer>
+  </body>
+  <script
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"
+  ></script>
+</html>
